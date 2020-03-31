@@ -127,9 +127,9 @@ Hex Hex::operator+(const Hex& c) {
 
   int numberInt1[1000];
   int numberInt2[1000];
-
-  int res_numberInt[1000];
   int s = 0;
+  int res_numberInt[1000];
+  
   if (size > c.size || size==c.size)
     s = size;
   else
@@ -332,6 +332,7 @@ Hex Hex::operator+(const Hex& c) {
 
   Hex res;
   const int _s = s;
+  res.size = _s;
   res.number = new char[_s];
   
   for (int i = 0; i<s; i++) {           // складываем в массив инт
@@ -645,6 +646,7 @@ Hex Hex::operator-(const Hex& c) {
 
   Hex res;
   const int _s = s;
+  res.size = _s;
   res.number = new char[_s];
 
   for (int i = 0; i < s ; i++) {

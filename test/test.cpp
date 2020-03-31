@@ -2,11 +2,51 @@
 #include <gtest/gtest.h>
 #include "ClassHex.h"
 
-TEST(TestClassHex, add) {
+TEST(TestClassHex, summ1) {
   Hex c2("123B", 4);
   Hex c1("131", 3);
   Hex p = c2 + c1;
-  Hex truerez("136C", 5);
+  Hex truerez("136C", 4);
+  EXPECT_EQ(p, truerez);
+}
+
+TEST(TestClassHex, summ2) {
+  Hex c2("ABC4", 4);
+  Hex c1("E3321", 5);
+  Hex p = c2 + c1;
+  Hex truerez("EDEE5", 5);
+  EXPECT_EQ(p, truerez);
+}
+
+TEST(TestClassHex, summ3) {
+  Hex c2("23A5", 4);
+  Hex c1("917", 3);
+  Hex p = c2 + c1;
+  Hex truerez("2CBC", 4);
+  EXPECT_EQ(p, truerez);
+}
+
+TEST(TestClassHex, razn1) {
+  Hex c2("423B", 4);
+  Hex c1("121", 3);
+  Hex p = c2 - c1;
+  Hex truerez("411A", 4);
+  EXPECT_EQ(p, truerez);
+}
+
+TEST(TestClassHex, razn2) {
+  Hex c2("ABC4", 4);
+  Hex c1("B3", 2);
+  Hex p = c2 - c1;
+  Hex truerez("AB11", 4);
+  EXPECT_EQ(p, truerez);
+}
+
+TEST(TestClassHex, razn3) {
+  Hex c2("23A5", 4);
+  Hex c1("911", 3);
+  Hex p = c2 - c1;
+  Hex truerez("1A94", 4);
   EXPECT_EQ(p, truerez);
 }
 
