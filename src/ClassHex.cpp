@@ -691,7 +691,6 @@ Hex Hex::operator-(const Hex& c) {
   }
   if (size < c.size) {
     res.number[s-1] = '-';
-    
   }
   int tmp3 = 0;
 
