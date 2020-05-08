@@ -6,45 +6,35 @@
 TEST(TestClassContacts, Create_input)
 {
   Contacts test_s;
-  Contact test;
-  ASSERT_NO_THROW(test.create_input(test));
+  Contact test("Серебренников", "Мирон", "Михайлович", "89229610000", "23.03.2001", "M", 0);
+  ASSERT_NO_THROW(test_s.create_add(test));
 }
 
-TEST(TestClassContacts, create_add) {
+TEST(TestClassContacts, create_add) 
+{
   Contacts test_s;
   Contact test;
   ASSERT_NO_THROW(test_s.create_add(test));
 }
 
-TEST(TestClassContacts, surname_input) {
-  Contacts test_s;
-  string _surname, _name, _patronymic;
-  ASSERT_NO_THROW(test_s.surname_input(_surname, _name, _patronymic));
-}
-
 TEST(TestClassContacts, search_by_surname) {
   Contacts test_s;
-  string _surname, _name, _patronymic;
+  string _surname = "Серебренников", _name = "Мирон", _patronymic = "Михайлович";
   ASSERT_NO_THROW(test_s.search_by_surname(_surname, _name, _patronymic));
 }
 
-TEST(TestClassContacts, search_letter_input) {
+/*TEST(TestClassContacts, search_letter_input) {
   Contacts test_s;
-  char b;
+  char b = 'C';
   ASSERT_NO_THROW(test_s.search_letter_input(b));
-}
+}*/
 
-TEST(TestClassContacts, tel_num_input) {
+/*TEST(TestClassContacts, tel_num_add) {
   Contacts test_s;
   string tel_number;
-  ASSERT_NO_THROW(test_s.search_tel_number_input(tel_number));
-}
-
-TEST(TestClassContacts, tel_num_add) {
-  Contacts test_s;
-  string tel_number;
+  tel_number = "89229610000";
   ASSERT_NO_THROW(test_s.search_tel_number_add(tel_number));
-}
+}*/
 
 TEST(TestClassContacts, kolvo_contacts) {
   Contacts test_s;
@@ -56,59 +46,57 @@ TEST(TestClassContacts, output_array) {
   ASSERT_NO_THROW(test_s.output_array());
 }
 
-TEST(TestClassContacts, all_favorites) {
-  Contacts test_s;
-  ASSERT_NO_THROW(test_s.all_favorites());
-}
-
-
 TEST(TestClassContacts, add_to_favorites) {
   Contacts test_s;
   string _surname, _name, _patronymic;
   ASSERT_NO_THROW(test_s.add_to_favorites(_surname, _name, _patronymic));
 }
 
-TEST(TestClassContacts, change_contact_input) {
+/*TEST(TestClassContacts, all_favorites) {
   Contacts test_s;
-  Contact test;
-  string _surname, _name, _patronymic;
+  ASSERT_NO_THROW(test_s.all_favorites());
+}*/
+
+/*TEST(TestClassContacts, change_contact_input) {
+  Contacts test_s;
+  Contact test("Серебренников", "Мирон", "Михайлович", "89229610000", "23.03.2001", "M", 0);
+  string _surname = "Серебренников", _name = "Мирон", _patronymic = "Михайлович";
   ASSERT_NO_THROW(test_s.change_contact_input(_surname, _name, _patronymic, test));
-}
+}*/
 
-TEST(TestClassContacts, change_contact_add) {
+/*TEST(TestClassContacts, change_contact_add) {
   Contacts test_s;
-  Contact test;
-  string _surname, _name, _patronymic;
+  Contact test("Серебренников", "Мирон", "Михайлович", "89229610000", "23.03.2001", "M", 0);
+  string _surname = "Серебренников", _name = "Мирон", _patronymic = "Михайлович";
   ASSERT_NO_THROW(test_s.change_contact_add(_surname, _name, _patronymic, test));
-}
+}*/
 
-TEST(TestClassContacts, sur_input) {
+/*TEST(TestClassContacts, sur_input) {
   Contacts test_s;
   Contact test;
-  string _surname, _name, _patronymic;
+  string _surname = "Серебренников", _name = "Мирон", _patronymic = "Михайлович";
   ASSERT_NO_THROW(test_s.surname_input(_surname, _name, _patronymic));
-}
+}*/
 
-TEST(TestClassContacts, del_sur_add) {
+/*TEST(TestClassContacts, del_sur_add) {
   Contacts test_s;
-  Contact test;
+  Contact test("Серебренников", "Мирон", "Михайлович", "89229610000", "23.03.2001", "M", 0);
   string _surname, _name, _patronymic;
   ASSERT_NO_THROW(test_s.delete_surname_add(test));
-}
+}*/
 
 
-TEST(TestClassContacts, del_tel_input) {
+/*TEST(TestClassContacts, del_tel_input) {
   Contacts test_s;
-  Contact test;
+  Contact test("Серебренников", "Мирон", "Михайлович", "89229610000", "23.03.2001", "M", 0);
   ASSERT_NO_THROW(test_s.delete_tel_number_input(test));
-}
+}*/
 
-TEST(TestClassContacts, del_tel_add) {
+/*TEST(TestClassContacts, del_tel_add) {
   Contacts test_s;
   Contact test;
   ASSERT_NO_THROW(test_s.delete_tel_number_add(test));
-  
-}
+}*/
 
 
 

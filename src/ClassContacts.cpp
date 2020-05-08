@@ -146,14 +146,10 @@ int Contacts::search_by_surname_return_index(string _surname, string _name, stri
       if (base[i].returnName() == _name) {
         if (base[i].returnPatronymic() == _patronymic) {
           return i;
-        } else {
-          return -1;
-          break;
         }
-      }
-      else {
-        return -1;
-        break;
+        else {
+          return -1;
+        }
       }
     }
   }
